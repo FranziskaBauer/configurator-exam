@@ -1,0 +1,152 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("Malika-Favre-vector-01.png");
+  width: 100vw;
+  /* Set a specific height */
+  min-height: 100vh; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-container {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  z-index: 1;
+  padding: 0;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+
+.config-container {
+  background-color: black;
+  font-size:24px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+  padding: 0;
+}
+
+.three-colors {
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+}
+
+.img-mask {
+  width: 100%;
+  position: relative;
+  left: 0;
+  align-items: center;
+}
+
+#container {
+  width: inherit;
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.wrapper > * {
+  /* width: 50%; */
+}
+@media (max-width: 600px) {
+  .wrapper > * {
+    width: 100%;
+  }
+}
+
+.img-mask {
+  ;
+}
+@media (max-width: 600px) {
+  .img-mask > * {
+    width: 100%;
+  }
+}
+
+
+
+/* Shapes */
+.shape {
+  opacity: 1;
+  /* fill:beige; */
+}
+#shapeCircle {
+  opacity: 1;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+button {
+  font-size: 1.2em;
+  outline: none;
+  font-size: 0.6em;
+  height: 40px;
+  width: 70px;
+  border-top: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.4em;
+  padding: 0;
+}
+button.active {
+  border: 2px solid red;
+
+ 
+}
+
+h3 {
+  color: white;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+section {
+  text-align: center;
+}
