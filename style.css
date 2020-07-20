@@ -138,13 +138,22 @@ button {
   font-size: 0.4em;
   padding: 0;
   color: beige;
-  background:grey;
+  background:black;
 	margin-bottom: 10px;
   outline: inherit;
   border: none;
 }
 button.active {
-  border: 2px solid white;
+  /* border: 2px solid white; */
+}
+
+.button-cat {
+  color: grey;
+}
+
+.button-cat.active {
+  border-bottom: 2px solid white;
+  color: white;
 }
 
 h3 {
@@ -216,6 +225,10 @@ section {
 }
 
 /* button colors */
+
+#buttonLips {
+  background-color: none;
+}
 
 .color-name {
   visibility: hidden;
