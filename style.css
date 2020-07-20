@@ -1,4 +1,7 @@
-
+:root {
+  --malika-red: #fd492b;
+  --malika-turquoise: #6CCCDE;
+}
 
 * {
   box-sizing: border-box;
@@ -14,24 +17,21 @@ body {
 }
 
 .parallax {
-  /* The image used */
   background-image: url("Malika-Favre-vector-01.png");
-  width: 100vw;
-  /* Set a specific height */
+  width: 100%;
   min-height: 100vh; 
-
-  /* Create the parallax scrolling effect */
+  margin-bottom: 100px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+
 .title-container {
-  position: fixed;
   width: 100%;
-  height: 70px;
   background-color: black;
+  text-transform: uppercase;
   z-index: 1;
   padding: 0;
 }
@@ -40,6 +40,7 @@ body {
   color: white;
   text-align: center;
   padding: 0;
+  font-size: 2.6em;
 }
 
 .config-container {
@@ -69,6 +70,14 @@ body {
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .img-mask {
+    top: -2px;
+  }
+}
+
+
+
 #container {
   width: inherit;
 }
@@ -78,11 +87,13 @@ body {
   display: flex;
   flex-flow: row wrap;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   padding-bottom: 100px;
 }
 .wrapper > * {
-  /* width: 50%; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 600px) {
   .wrapper > * {
@@ -90,22 +101,17 @@ body {
   }
 }
 
-.img-mask {
-  ;
-}
 @media (max-width: 600px) {
   .img-mask > * {
     width: 100%;
   }
 }
 
-
-
 /* Shapes */
 .shape {
   opacity: 1;
-  /* fill:beige; */
 }
+
 #shapeCircle {
   opacity: 1;
 }
@@ -131,11 +137,14 @@ button {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.4em;
   padding: 0;
+  color: beige;
+  background:grey;
+	margin-bottom: 10px;
+  outline: inherit;
+  border: none;
 }
 button.active {
-  border: 2px solid red;
-
- 
+  border: 2px solid white;
 }
 
 h3 {
@@ -149,4 +158,97 @@ h3 {
 
 section {
   text-align: center;
+}
+
+.going-down {
+  margin-bottom: 0.5em;
+
+  width: 2em;
+  height: 2em;
+
+  position: absolute;
+  left: calc(50% - 1em);
+  bottom: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 5px solid var(--malika-red);
+  background-color: var(--malika-red);
+  border-radius: 50%;
+
+  font-family: monospace;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+.arrow {
+  display: block;
+  color: #303fff;
+  height: 50px;
+
+  /* apply the animation */
+  animation-name: goingDown;
+  animation-duration: .5s;
+  animation-delay: 0s;
+
+  /* how many times should the animation play */
+  animation-iteration-count: infinite;
+  /* the animation should reverse direction each cycle */
+  animation-direction: alternate;
+  /* timing function */
+  animation-timing-function: linear;
+}
+
+#arrow-down-blue {
+  height: 60px;
+}
+
+/* animation of the arrow button */
+@keyframes goingDown {
+  0% {
+    transform: translateY(-20%) scale(1);
+  }
+  100% {
+    transform: translateY(10%) scale(1);
+  }
+}
+
+/* button colors */
+
+.color-name {
+  visibility: hidden;
+}
+
+#buttonYellow {
+  background-color: #f0f076;
+}
+
+#buttonGreen {
+  background-color: #9ff076;
+}
+
+#buttonPink {
+  background-color: #ed4cba;
+}
+
+#buttonBlue {
+  background-color: #5275ff;
+}
+
+#buttonDarkRed {
+  background-color: #b90d10;
+}
+
+#buttonTurquoise {
+  background-color: #6CCCDE;
+}
+
+#buttonRed {
+  background-color: #fd492b;
+}
+
+#buttonNude {
+  background-color: #fdd5c4;
 }

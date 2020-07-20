@@ -13,9 +13,23 @@
       <h2 class="title">Malika's Makeup</h2>
     </div>
 
-    <div class="parallax"></div>
+    <div class="parallax">
+      <a href="#second" class="going-down">
+        <span class="arrow">
+          <svg version="1.1" id="arrow-down-blue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 viewBox="0 0 86.6 205.9" style="enable-background:new 0 0 86.6 205.9;" xml:space="preserve">
+          <style type="text/css">
+          	.st0{fill:#6CCCDE;}
+          </style>
+          <polygon class="st0" points="43.3,13.4 85.8,13.4 64.6,101.3 43.3,189.3 22,101.3 0.8,13.4 "/>
+          </svg>
 
-    <div class="config-container">
+        </span>
+      </a>
+    </div>
+    
+
+    <div id="second" class="config-container">
       <div class="wrapper">
 
         <!-- <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +49,7 @@
           	.st2-nails{fill:#F04E34;} -->
           </style>
           <g id="container">
-          	<rect id="shapeLips" class="shape st0-lips" x="720" y="629" width="720" height="805"/>    
+          	<rect id="shapeLips" class="shape st0-lips" x="720" y="629" width="720" height="800"/>    
           	<rect id="shapeEyes" class="shape st1-eyes" x="720" y="0" width="719" height="620"/>
           	<rect id="shapeNails" class="shape st2-nails" width="720" height="1430"/>
           </g>
@@ -53,10 +67,16 @@
         
           <section>
             <h3>Color Palette</h3>
-            <button class="active" id="buttonYellow" data-color="f0f076">Yellow</button>
-            <button id="buttonGreen" data-color="9ff076">Green</button>
-            <button id="buttonPink" data-color="ed4cba">Pink</button>
-            <button id="buttonBlue" data-color="5275ff">Blue</button>
+            <button class="active" id="buttonYellow" data-color="f0f076"><span class="color-name">Yellow</span></button>
+            <button id="buttonGreen" data-color="9ff076"><span class="color-name">Green</span></button>
+            <button id="buttonPink" data-color="ed4cba"><span class="color-name">Pink</span></button>
+            <button id="buttonBlue" data-color="5275ff"><span class="color-name">Blue</span></button>
+            <button id="buttonDarkRed" data-color="b90d10"><span class="color-name">Dark Red</span></button>
+            <button id="buttonTurquoise" data-color="6CCCDE"><span class="color-name">Dark Red</span></button>
+            <button id="buttonRed" data-color="fd492b"><span class="color-name">Light Red</span></button>
+            <button id="buttonNude" data-color="fdd5c4"><span class="color-name">Nude</span></button>
+            
+            
           </section>
         
         </aside>
@@ -77,7 +97,8 @@
     document.getElementById('buttonNails').addEventListener('click', changeShape);
 
     let lastShapeButtonClicked = document.getElementById('buttonLips');
-
+	  let lastShapeClicked = '#shapeLips'; //hier könnte man noch schauen welcher shape initial "active" ist
+	
     // function that gets triggered on click, the argument is the event
     function changeShape(event) {
       //drill inside the event to get the data-shape attribute inside the button
@@ -96,6 +117,9 @@
       event.target.classList.add('active');
       // save the button clicked in the variable
       lastShapeButtonClicked = event.target;
+	  
+	  // save the last clicked shape
+	  lastShapeClicked = elementToShow; 
     }
     ////////////////////////////////////
     // CHANGE COLORS
@@ -104,13 +128,21 @@
     document.getElementById('buttonGreen').addEventListener('click', changeColor);
     document.getElementById('buttonPink').addEventListener('click', changeColor);
     document.getElementById('buttonBlue').addEventListener('click', changeColor);
+    document.getElementById('buttonDarkRed').addEventListener('click', changeColor);
+    document.getElementById('buttonTurquoise').addEventListener('click', changeColor);
+    document.getElementById('buttonRed').addEventListener('click', changeColor);
+    document.getElementById('buttonNude').addEventListener('click', changeColor);
 
-    let lastColorButtonClicked = document.getElementById('buttonYellow');
-
+    let lastColorButtonClicked 	= document.getElementById('buttonYellow');
+	
+	
     function changeColor(event) {
       let colorToUse = event.target.dataset.color;
-      gsap.to('.shape', { fill: colorToUse, duration: .25 });
-
+	  
+      // animate (only active) shape
+     gsap.to(lastShapeClicked, { fill: colorToUse, opacity: 1, duration: .25 });
+    
+	
       // check if the lastShapeButtonClicked has a value assigned to it
       if (lastColorButtonClicked) {
         // if it does, remove the 'active' class name from it
