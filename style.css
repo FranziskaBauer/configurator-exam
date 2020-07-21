@@ -61,7 +61,7 @@ body {
   color: white;
   text-align: center;
   padding-top: 20px;
-  padding-top: 15px;
+  padding-bottom: 15px;
   margin: 0;
   font-size: 2em;
   letter-spacing: 2px;
@@ -325,7 +325,7 @@ section {
 /* animation of the arrow button */
 @keyframes goingDown {
   0% {
-    transform: translateY(-10%) scale(0.7);
+    transform: translateY(-15%) scale(0.7);
   }
   100% {
     transform: translateY(5%) scale(1);
