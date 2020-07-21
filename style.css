@@ -13,7 +13,8 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-family: "Brown-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .main-container {
@@ -40,6 +41,7 @@ body {
 
 
 .title-container {
+  position: fixed;
   width: 100%;
   background-color: black;
   text-transform: uppercase;
@@ -47,11 +49,22 @@ body {
   padding: 0;
 }
 
+
+@media (max-width: 600px) {
+  .title-container {
+    position: static;
+  }
+}
+
+
 .title {
   color: white;
   text-align: center;
-  padding: 0;
+  padding-top: 20px;
+  padding-top: 15px;
+  margin: 0;
   font-size: 2em;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 600px) {
@@ -155,9 +168,11 @@ button {
   height: 40px;
   width: 70px;
   border-top: 20px;
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-family: "Brown-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 0.5em;
   text-transform: uppercase;
+  letter-spacing: 1px;
   padding: 0;
   color: beige;
   background:black;
@@ -244,9 +259,17 @@ section {
   background-color: var(--malika-red);
   border-radius: 50%;
 
-  font-family: monospace;
+  font-family: "Brown-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 4em;
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .going-down {
+    width: 1em;
+    height: 1em;
+    left: calc(50% - 0.5em);
+  }
 }
 
 .arrow {
@@ -268,7 +291,15 @@ section {
 }
 
 #arrow-down-blue {
-  height: 60px;
+  height: 1em;
+}
+
+@media (max-width: 600px) {
+  #arrow-down-blue {
+    width: 0.7em;
+    height: 0.7em;
+    left: calc(50% - 0.5em);
+  }
 }
 
 
@@ -294,10 +325,10 @@ section {
 /* animation of the arrow button */
 @keyframes goingDown {
   0% {
-    transform: translateY(-20%) scale(1);
+    transform: translateY(-10%) scale(0.7);
   }
   100% {
-    transform: translateY(10%) scale(1);
+    transform: translateY(5%) scale(1);
   }
 }
 
