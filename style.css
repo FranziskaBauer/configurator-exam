@@ -196,6 +196,10 @@ button.active {
   border-bottom: 2px solid white;
 }
 
+.color-btn {
+  font-size: 0.1em;
+}
+
 .color-btn.active {
   border: 3px solid white;
 }
