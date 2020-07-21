@@ -30,7 +30,7 @@
     
 
     <div id="second" class="config-container">
-      <div class="wrapper">
+      <div id="wrapper" class="wrapper">
 
         <!-- <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
           <g id="container" stroke="none" stroke-width="1" fill="#ff0" fill-rule="evenodd">
@@ -59,26 +59,24 @@
 
         <aside>
           <section>
-            <h3>Lips, Eyes and Nails</h3>
+            <!-- <h3>Lips, Eyes and Nails</h3> -->
+            <button id="buttonNails" class="button-cat" data-shape="Nails">Nails</button>
             <button class="active button-cat" id="buttonLips" data-shape="Lips">Lips</button>
             <button id="buttonEyes" class="button-cat" data-shape="Eyes">Eyes</button>
-            <button id="buttonNails" class="button-cat" data-shape="Nails">Nails</button>
-          </section>
-        
-          <section>
-            <h3>Color Palette</h3>
-            <button class="active" id="buttonYellow" data-color="f0f076"><span class="color-name">Yellow</span></button>
-            <button id="buttonGreen" data-color="9ff076"><span class="color-name">Green</span></button>
-            <button id="buttonPink" data-color="ed4cba"><span class="color-name">Pink</span></button>
-            <button id="buttonBlue" data-color="5275ff"><span class="color-name">Blue</span></button>
-            <button id="buttonDarkRed" data-color="b90d10"><span class="color-name">Dark Red</span></button>
-            <button id="buttonTurquoise" data-color="6CCCDE"><span class="color-name">Dark Red</span></button>
-            <button id="buttonRed" data-color="fd492b"><span class="color-name">Light Red</span></button>
-            <button id="buttonNude" data-color="fdd5c4"><span class="color-name">Nude</span></button>
             
-            
+            <section class="color-palette">
+              <h3>Color Palette</h3>
+              <button class="active color-btn" id="buttonYellow" data-color="f0f076"><span class="color-name">Yellow</span></button>
+              <button class="color-btn" id="buttonGreen" data-color="9ff076"><span class="color-name">Green</span></button>
+              <button class="color-btn" id="buttonPink" data-color="ed4cba"><span class="color-name">Pink</span></button>
+              <button class="color-btn" id="buttonBlue" data-color="5275ff"><span class="color-name">Blue</span></button>
+              <button class="color-btn" id="buttonDarkRed" data-color="b90d10"><span class="color-name">Dark Red</span></button>
+              <button class="color-btn" id="buttonTurquoise" data-color="6CCCDE"><span class="color-name">Dark Red</span></button>
+              <button class="color-btn" id="buttonRed" data-color="fd492b"><span class="color-name">Light Red</span></button>
+              <button class="color-btn" id="buttonNude" data-color="fdd5c4"><span class="color-name">Nude</span></button>
+            </section>
           </section>
-        
+                
         </aside>
 
       </div>
@@ -86,6 +84,7 @@
 
     </div>
   </main>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
   <script>
     ////////////////////////////////////
