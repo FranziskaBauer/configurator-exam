@@ -140,7 +140,6 @@ aside {
   }
 }
 
-
 /* Buttons */
 button {
   font-size: 1.2em;
@@ -155,7 +154,8 @@ button {
   padding: 0;
   color: beige;
   background:black;
-	margin-bottom: 15px;
+  margin-top: 5px;
+	margin-bottom: 10px;
   outline: inherit;
   border: none;
   cursor: pointer;
@@ -169,7 +169,6 @@ button {
     font-size: 0.7em;
   }
 }
-
 
 button.active {
   border-bottom: 2px solid white;
@@ -203,6 +202,14 @@ h3 {
   h3 {
     font-size: 1em;
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  h3 {
+    font-size: 0.7em;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
 }
 
