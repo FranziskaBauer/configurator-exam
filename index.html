@@ -18,12 +18,12 @@
         <span class="circle">
           <?xml version="1.0" encoding="utf-8"?>
           <svg version="1.1" id="circle-down-blue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 viewBox="0 0 100 100" style="enable-background:new 0 0 86.6 205.9;" xml:space="preserve">
+          	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
           <style type="text/css">
           	.st0{fill:#6CCCDE;}
           </style>
           <!-- <polygon class="st0" points="43.3,13.4 85.8,13.4 64.6,101.3 43.3,189.3 22,101.3 0.8,13.4 "/> -->
-          <circle cx="50" cy="50" r="40" stroke-width="3" fill="#6CCCDE" />
+          <circle cx="50" cy="50" r="50" stroke-width="3" fill="#6CCCDE" />
           </svg>
         </span>
       </a>
@@ -86,13 +86,18 @@
   </main>
 
   <footer>
-    
+    <div class="footer-content">
+      <p class="footer-item footer-item-1">Franziska Bauer (DVIS)</p>
+      <p class="footer-item footer-item-2"><a class="weblink" href="https://www.malikafavre.com">www.malikafavre.com</a></p>
+      <p class="footer-item footer-item-3">SPD 2020 | Frontend Technologies II</p>
+
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
   <script>
     ////////////////////////////////////
-    // CHANGE SHAPES
+    // SELECT ALL SHAPES
     ////////////////////////////////////
     // selects the buttons and attaches the click event listener to them
     document.getElementById('buttonLips').addEventListener('click', changeShape);
@@ -100,62 +105,58 @@
     document.getElementById('buttonNails').addEventListener('click', changeShape);
 
     let lastShapeButtonClicked = document.getElementById('buttonLips');
-	  let lastShapeClicked = '#shapeLips'; //hier könnte man noch schauen welcher shape initial "active" ist
+	  let lastShapeClicked = '#shapeLips'; //**
 	
-    // function that gets triggered on click, the argument is the event
+  // function that gets triggered on click, the argument is the event
     function changeShape(event) {
-      //drill inside the event to get the data-shape attribute inside the button
-      let elementToShow = '#shape' + event.target.dataset.shape;
-
-      // animate shapes
-      gsap.to('.shape', { opacity: 1, duration: .25 });
-      gsap.to(elementToShow, { opacity: 1, duration: .25, delay: .25 });
-
-      // check if the lastShapeButtonClicked has a value assigned to it
-      if (lastShapeButtonClicked) {
-        // if it does, remove the 'active' class name from it
-        lastShapeButtonClicked.classList.remove('active');
-      }
-      // add 'active' class name to the button clicked
-      event.target.classList.add('active');
-      // save the button clicked in the variable
-      lastShapeButtonClicked = event.target;
-	  
-	  // save the last clicked shape
-	  lastShapeClicked = elementToShow; 
+    //drill inside the event to get the data-shape attribute inside the button
+    let elementToShow = '#shape' + event.target.dataset.shape;
+    // animate shapes
+    gsap.to('.shape', { opacity: 1, duration: .25 });
+    gsap.to(elementToShow, { opacity: 1, duration: .25, delay: .25 });
+    // check if the lastShapeButtonClicked has a value assigned to it
+    if (lastShapeButtonClicked) {
+      // if it does, remove the 'active' class name from it
+      lastShapeButtonClicked.classList.remove('active');
     }
-    ////////////////////////////////////
-    // CHANGE COLORS
-    ////////////////////////////////////
-    document.getElementById('buttonYellow').addEventListener('click', changeColor);
-    document.getElementById('buttonGreen').addEventListener('click', changeColor);
-    document.getElementById('buttonPink').addEventListener('click', changeColor);
-    document.getElementById('buttonBlue').addEventListener('click', changeColor);
-    document.getElementById('buttonDarkRed').addEventListener('click', changeColor);
-    document.getElementById('buttonTurquoise').addEventListener('click', changeColor);
-    document.getElementById('buttonRed').addEventListener('click', changeColor);
-    document.getElementById('buttonNude').addEventListener('click', changeColor);
+    // add 'active' class name to the button clicked
+    event.target.classList.add('active');
+    // save the button clicked in the variable
+    lastShapeButtonClicked = event.target;
+	
+	// save the last clicked shape
+	lastShapeClicked = elementToShow; 
+  }
+  ////////////////////////////////////
+  // CHANGE COLORS OF NAILPOLISH, LIPSTICK AND EYESHADOW
+  ////////////////////////////////////
+  document.getElementById('buttonYellow').addEventListener('click', changeColor);
+  document.getElementById('buttonGreen').addEventListener('click', changeColor);
+  document.getElementById('buttonPink').addEventListener('click', changeColor);
+  document.getElementById('buttonBlue').addEventListener('click', changeColor);
+  document.getElementById('buttonDarkRed').addEventListener('click', changeColor);
+  document.getElementById('buttonTurquoise').addEventListener('click', changeColor);
+  document.getElementById('buttonRed').addEventListener('click', changeColor);
+  document.getElementById('buttonNude').addEventListener('click', changeColor);
+  let lastColorButtonClicked 	= document.getElementById('buttonYellow');
 
-    let lastColorButtonClicked 	= document.getElementById('buttonYellow');
+  function changeColor(event) {
+    let colorToUse = event.target.dataset.color;
 	
-	
-    function changeColor(event) {
-      let colorToUse = event.target.dataset.color;
-	  
-      // animate (only active) shape
-     gsap.to(lastShapeClicked, { fill: colorToUse, opacity: 1, duration: .25 });
-    
-	
-      // check if the lastShapeButtonClicked has a value assigned to it
-      if (lastColorButtonClicked) {
-        // if it does, remove the 'active' class name from it
-        lastColorButtonClicked.classList.remove('active');
-      }
-      // add 'active' class name to the button clicked
-      event.target.classList.add('active');
-      // save the button clicked in the variable
-      lastColorButtonClicked = event.target;
+    // animate (only active) shape
+   gsap.to(lastShapeClicked, { fill: colorToUse, opacity: 1, duration: .25 });
+  
+
+    // check if the lastShapeButtonClicked has a value assigned to it
+    if (lastColorButtonClicked) {
+      // if it does, remove the 'active' class name from it
+      lastColorButtonClicked.classList.remove('active');
     }
+    // add 'active' class name to the button clicked
+    event.target.classList.add('active');
+    // save the button clicked in the variable
+    lastColorButtonClicked = event.target;
+  }
   </script>
 
 </body>
