@@ -100,6 +100,7 @@ body {
   /* justify-content: center; */
   padding-bottom: 100px;
 }
+
 .wrapper > * {
   width: 50%;
   display: flex;
@@ -136,7 +137,7 @@ aside {
   margin-right: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .color-palette {
     padding: 30px;
   }
