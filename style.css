@@ -32,20 +32,27 @@ body {
   background-size: cover;
 }
 
-.shadow-container {
-  background: linear-gradient(180deg, rgba(28,0,184,1) 0%, rgba(0,212,255,0) 100%);
-  width: 100%;
-  min-height: 50vh; 
-  position: relative;
-  mix-blend-mode: multiply;
-}
-
 @media (max-width: 600px) {
   .parallax {
     top: -2px;
     height: 90%;
   }
 }
+
+.shadow-container {
+  background: linear-gradient(180deg, rgba(28,0,184,1) 0%, rgba(0,212,255,0) 100%);
+  width: 100%;
+  min-height: 70vh; 
+  position: relative;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+  .shadow-container {
+    height: 50%; 
+  }
+}
+
 
 .title-container {
   position: fixed;
