@@ -1,6 +1,6 @@
 :root {
   --malika-red: #fd492b;
-  --malika-turquoise: #6CCCDE;
+  --malika-turquoise: #57dbea;
 }
 
 html {
@@ -415,7 +415,7 @@ section {
 }
 
 #buttonTurquoise {
-  background-color: #6CCCDE;
+  background-color: #57dbea;
 }
 
 #buttonRed {
