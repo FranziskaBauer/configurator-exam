@@ -49,7 +49,7 @@ body {
 
 @media (max-width: 600px) {
   .shadow-container {
-    height: 50%; 
+    height: 50vh; 
   }
 }
 
