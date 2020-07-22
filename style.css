@@ -32,6 +32,7 @@ body {
   background-size: cover;
 }
 
+
 @media (max-width: 600px) {
   .parallax {
     top: -2px;
@@ -61,7 +62,8 @@ body {
   padding-bottom: 15px;
   margin: 0;
   font-size: 2em;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  font-weight: 300;
 }
 
 @media (min-width: 600px) {
@@ -94,10 +96,8 @@ body {
 }
 
 .text-p2 {
-  font-weight: bold;
-  
+  font-weight: bold; 
 }
-
 
 .config-container {
   background-color: black;
@@ -198,7 +198,7 @@ button {
   font-family: "Brown-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 0.5em;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   padding: 0;
   color: beige;
   background:black;
@@ -256,6 +256,7 @@ button.active {
 h3 {
   color: white;
   font-size: 0.6em;
+  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -288,7 +289,7 @@ section {
   height: 8em;
   position: absolute;
   left: calc(50% - 1em);
-  bottom: 0.5em;
+  bottom: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,15 +397,18 @@ section {
 /* FOOTER */
 
 footer {
-  background-color: var(--malika-turquoise);
+  background-color:  #0030eb;
   padding-left: 100px;
   padding-right: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 700px) {
   footer {
     padding-left: 0;
     padding-right: 0;
+    font-size: 0.7em;
   }
 }
 
@@ -418,7 +422,7 @@ footer {
   color: white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .footer-content {
     height: inherit;
     display: flex;
@@ -445,6 +449,7 @@ footer {
   grid-column: 1/2;
   grid-row: 1/2;
   justify-self: start;
+  padding-top: 0.2em;
 }
 
 .footer-item-2 {
@@ -457,6 +462,7 @@ footer {
   grid-column: 3/4;
   grid-row: 1/2;
   justify-self: end;
+  padding-bottom: 0.8em;
 }
 
 a:hover {
