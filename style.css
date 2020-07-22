@@ -73,30 +73,59 @@ body {
 }
 
 .text-container {
-  height: 200px;
   margin-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
   font-size: 1.1em;
   text-transform: uppercase;
   line-height: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+
 }
 
 @media (min-width: 700px) {
   .text-container {
     padding-top: 60px;
-    height: 300px;
     font-size: 2em;
   }
 }
 
-.text-p1 {
-  padding-top: 30px;
+@media (max-width: 700px) {
+  .text-container {
+    text-align: left;
+  }
+}
+
+.text-big {
+  font-size: 1.7em;
 }
 
 .text-p2 {
-  font-weight: bold; 
+  height: 300px;
+  line-height: 27px;
+  padding-top: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 700px) {
+  .text-p2 {
+    font-size: 1.5em;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .text-p2 {
+    height: 200px;
+  }
+}
+
+.text-red {
+  color: var(--malika-red);
 }
 
 .config-container {
